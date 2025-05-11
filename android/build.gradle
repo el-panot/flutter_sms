@@ -2,7 +2,7 @@ group 'com.example.flutter_sms'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.7.10'
+    ext.kotlin_version = '1.5.31'
     repositories {
         google()
         jcenter()
@@ -28,6 +28,10 @@ android {
     compileSdkVersion 31
     namespace 'com.abc.flutter_sms'
 
+    kotlinOptions {
+        jvmTarget = "1.8" // Set to a valid JVM target
+    }
+    
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
